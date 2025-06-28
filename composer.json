@@ -1,0 +1,15 @@
+{
+    "name": "physiquepro/app",
+    "description": "PhysiquePro Learning Management System",
+    "type": "project",
+    "require": {
+        "google/apiclient": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhysiquePro\\": "includes/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+} 

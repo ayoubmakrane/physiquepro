@@ -1,0 +1,28 @@
+# ملف .htaccess بسيط للسيرفر المحلي XAMPP
+
+# تمكين إعادة الكتابة
+RewriteEngine On
+
+# تعيين الترميز
+AddDefaultCharset UTF-8
+
+# حماية أساسية للملفات الحساسة
+<Files "config.php">
+    Deny from all
+</Files>
+
+<Files "connection.php">
+    Deny from all
+</Files>
+
+# إعدادات PHP
+<IfModule mod_php.c>
+    php_value upload_max_filesize 50M
+    php_value post_max_size 50M
+    php_value max_execution_time 300
+    php_value memory_limit 256M
+</IfModule>
+
+# صفحات الأخطاء
+ErrorDocument 404 /physiquepro/404.php
+ErrorDocument 500 /physiquepro/500.php 
